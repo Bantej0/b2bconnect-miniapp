@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <title>B2BConnect</title>
+        <meta name="viewpor" content="width=device-width, initial-scale=1.0"
+
+        <script  src="https://telegram.org/js/telegram-web-app.js"></script>
+
+        <style>
+            body {
+                margin: 0;
+                padding: 20px;
+                font-family: arial, sans-serif;
+                background: var(--tg-theme-bg-color);
+                color: var(--tg-theme-text-color);
+            }
+
+            .card {
+                background: var(--tg-theme-secondary-bg-color);
+                border-radius: 12px;
+                padding: 16px;
+            }
+            h1 {
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="card">
+            <h1>🚀 B2BConnect</h1>
+            <p>Telegram Mini App работает</p>
+            <p id="user"></p>
+        </div>
+
+        <script>
+            const tg = window.Telegram.WebApp;
+            tg.ready();
+
+            if (tg.initDataUnsafe?.user) {
+                document.getElementById("user").innerText = `Привет, ${tg.initDataUnsafe.user.first_name}`;
+                
+            }
+        </script>
+    </body>
