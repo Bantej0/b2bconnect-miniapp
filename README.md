@@ -1,1 +1,1 @@
-# b2bconnect-miniapp
+# b2bconne
